@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=74.0.0", "wheel>=0.40.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formularios-em-flask"
+version = "0.1.0"
+description = "Projeto de inserção de dados em formulários utilizando Flask e HTML."
+authors = [
+    { name="Douglas Henrique Siqueira Abreu", email="douglas.henrique@puc-campinas.edu.br" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["flask", "web", "html", "python"]
+
+dependencies = [
+    "flask>=3.0.0"
+]
+
+[project.urls]
+repository = "https://github.com/seuprojeto"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--strict-markers"
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+
+[tool.pylint]
+max-line-length = 88
+disable = [
+    "C0114",  # Missing module docstring
+    "C0116",  # Missing function or method docstring
+    "W0613",  # Unused argument
+    "C0103",  # Variable name doesn't conform to snake_case
+]
