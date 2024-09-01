@@ -1,0 +1,13 @@
+Instale o Python
+
+Para instalar o app instale um ambiente virtual:
+    - python3 -m venv .venv
+
+Ative o ambiente virtual:
+    No macOS/Linux:
+        - source .venv/bin/activate
+    No Windows:
+        - .venv\Scripts\activate
+
+Instale os pacotes necessários:
+    - pip install .
