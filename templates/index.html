@@ -9,6 +9,13 @@
     <h1 style="text-align: center;" >Bem Vindos</h1>
     <h1 style="text-align: center;" >Introdução a Tecnologias para Web!</h1>
     <hr>
+    <h2 style="text-align: left;" >Inserir Frutas</h2>
+    <form action = "{{url_for('home_page')}}" method="POST">
+    <label>Fruta: </label>
+    <input type="text" name="fruta" placeholder="Digite o nome da fruta">
+    <button type="submit">Adicionar</button>
+    </form>
+    <hr>
     <ul>
       {% for fruta in frutas_do_html %}
         <li>{{ fruta }}</li>
